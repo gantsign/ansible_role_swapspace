@@ -1,38 +1,86 @@
-Role Name
-=========
+Ansible Role: Swapspace
+=======================
 
-A brief description of the role goes here.
+[![Build Status](https://travis-ci.com/gantsign/ansible_role_swapspace.svg?branch=master)](https://travis-ci.com/gantsign/ansible_role_swapspace)
+[![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-gantsign.swapspace-blue.svg)](https://galaxy.ansible.com/gantsign/swapspace)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/gantsign/ansible_role_swapspace/master/LICENSE)
+
+Role to install and configure
+[Swapspace](https://github.com/Tookmund/Swapspace) a dynamic swap manager for
+Linux.
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+* Ansible >= 2.6
+
+* Linux Distribution
+
+    * Debian Family
+
+        * Ubuntu
+
+            * Bionic (18.04)
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
-
-Dependencies
-------------
-
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+None
 
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+```yaml
+- hosts: servers
+  roles:
+    - role: gantsign.swapspace
+```
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+More Roles From GantSign
+------------------------
+
+You can find more roles from GantSign on
+[Ansible Galaxy](https://galaxy.ansible.com/gantsign).
+
+Development & Testing
+---------------------
+
+This project uses [Molecule](http://molecule.readthedocs.io/) to aid in the
+development and testing; the role is unit tested using
+[Testinfra](http://testinfra.readthedocs.io/) and
+[pytest](http://docs.pytest.org/).
+
+To develop or test you'll need to have installed the following:
+
+* Linux (e.g. [Ubuntu](http://www.ubuntu.com/))
+* [Docker](https://www.docker.com/)
+* [Python](https://www.python.org/) (including python-pip)
+* [Ansible](https://www.ansible.com/)
+* [Molecule](http://molecule.readthedocs.io/)
+
+Because the above can be tricky to install, this project includes
+[Molecule Wrapper](https://github.com/gantsign/molecule-wrapper). Molecule
+Wrapper is a shell script that installs Molecule and it's dependencies (apart
+from Linux) and then executes Molecule with the command you pass it.
+
+To test this role using Molecule Wrapper run the following command from the
+project root:
+
+```bash
+./moleculew test
+```
+
+Note: some of the dependencies need `sudo` permission to install.
 
 License
 -------
 
-BSD
+MIT
 
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+John Freeman
+
+GantSign Ltd.
+Company No. 06109112 (registered in England)
