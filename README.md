@@ -1,7 +1,7 @@
 Ansible Role: Swapspace
 =======================
 
-[![Build Status](https://travis-ci.com/gantsign/ansible_role_swapspace.svg?branch=master)](https://travis-ci.com/gantsign/ansible_role_swapspace)
+[![Tests](https://github.com/gantsign/ansible_role_swapspace/workflows/Tests/badge.svg)](https://github.com/gantsign/ansible_role_swapspace/actions?query=workflow%3ATests)
 [![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-gantsign.swapspace-blue.svg)](https://galaxy.ansible.com/gantsign/swapspace)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/gantsign/ansible_role_swapspace/master/LICENSE)
 
